@@ -8,7 +8,8 @@ pip install NCBIGeneInfo
 # Running
 
 ```r{}
-import NCBIGeneInfo
-gene_info.gene_info SLC8A1 MEIS1 ASCL2
+from NCBIGeneInfo.gene_info import NCBIGeneInfo
+ncbi = NCBIGeneInfo()
+ncbi.fetch_gene_info(["SLC8A1", "MEIS1", "ASCL2"])
 
 ```
