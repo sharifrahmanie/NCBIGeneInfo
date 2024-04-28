@@ -9,11 +9,8 @@ class NCBIGeneInfo:
 
     def fetch_gene_info(self, gene_list):
         geneids = []
-        # Get the path to the directory where the current file is located
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        # Construct the full path to the NCBI_gene_dict file
         gene_dict_path = os.path.join(current_dir, "NCBI_gene_dict")
-        # Open the gene dictionary file
         with open(gene_dict_path) as ncbi_genes:
             for line in ncbi_genes:
                 line = line.strip().split(":")
